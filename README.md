@@ -41,11 +41,12 @@ If you run `pub serve`:
 
    - The Transformer reads the SCSS-File
    
-   - @mdl will be replaced with the path to your local mdl-package
+   - @mdl will be replaced with the path to your local mdl-package  
    e.g. `@import "<your user>/.pub-cache/hosted/pub.dartlang.org/mdl-<version from pubspec>/lib/assets/themes/deep_purple-pink/material-design-lite";`
    
    - SCSS-File will be compiled to .CSS
    
+Here is a simple example: [GH MDL Text-Only](https://github.com/MikeMitterer/dart-sass-var-transformer/tree/master/samples/text_only)
    
 ###License 
 
