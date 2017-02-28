@@ -2,7 +2,7 @@ name: sass_var_transformer
 description: Transformer that changes vars in SASS-Files
 version: 0.1.0
 author: Mike Mitterer <office@mikemitterer.at>
-homepage: 
+homepage: https://github.com/MikeMitterer/dart-sass-var-transformer
 
 environment:
   sdk: '>=1.19.0 <2.0.0'
