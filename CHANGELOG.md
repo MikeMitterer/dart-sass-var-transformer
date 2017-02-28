@@ -1,5 +1,5 @@
-# Changelog
+# Change Log for sass_var_transformer
+Transformer that changes vars in SASS-Files
 
-## 0.0.1
 
-- Initial version
+This CHANGELOG.md was generated with [**Changelog for Dart**](https://pub.dartlang.org/packages/changelog)
