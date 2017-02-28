@@ -1,0 +1,15 @@
+name: sass_var_transformer
+description: Transformer that changes vars in SASS-Files
+version: 0.0.1+1
+author: Mike Mitterer <office@mikemitterer.at>
+homepage: 
+
+environment:
+  sdk: '>=1.19.0 <2.0.0'
+
+dependencies:
+  package_resolver: ^1.0.0
+  packages: ^0.1.0
+   
+  sass: ^1.0.0-alpha
+  barback: ^0.15.2
