@@ -7,6 +7,7 @@ import 'package:path/path.dart' as p;
 import 'package:package_resolver/package_resolver.dart';
 import 'package:packages/packages.dart';
 import 'dart:io';
+import 'package:sass_var_transformer/renderer.dart';
 
 import 'dart:async';
 
@@ -57,27 +58,23 @@ class SassVarTransformer extends Transformer {
     ///
     /// Finally throws a [SassException] if conversion fails.
     String _render(String path, {bool color: false, SyncPackageResolver packageResolver}) {
-        var contents = readFile(path);
+        String contents = readFile(path);
 
-        final Packages packages = new Packages();
-        _vars.forEach((final String key, final String value) {
-            if(value.startsWith("package:")) {
-                final Package package = packages.resolvePackageUri( Uri.parse(value));
+        return sassRenderer(contents,path,preRenderer: (String contents) {
+            final Packages packages = new Packages();
 
-                final String filePath = package.root.toFilePath(windows: Platform.isWindows);
-                print("${key} ->${filePath}");
-                contents = contents.replaceAll("@${key}","${filePath}/lib");
-            } else {
-                contents = contents.replaceAll("@${key}",value );
-            }
+            _vars.forEach((final String key, final String value) {
+                if(value.startsWith("package:")) {
+                    final Package package = packages.resolvePackageUri( Uri.parse(value));
+
+                    final String filePath = package.root.toFilePath(windows: Platform.isWindows);
+                    contents = contents.replaceAll("@${key}","${filePath}/lib");
+                } else {
+                    contents = contents.replaceAll("@${key}",value );
+                }
+            });
+
+            return contents;
         });
-
-        var url = p.toUri(path);
-        var sassTree = p.extension(path) == '.sass'
-            ? new sass.Stylesheet.parseSass(contents, url: url, color: color)
-            : new sass.Stylesheet.parseScss(contents, url: url, color: color);
-        var cssTree = evaluate(sassTree, color: color, packageResolver: packageResolver);
-        return toCss(cssTree);
     }
-
 }
