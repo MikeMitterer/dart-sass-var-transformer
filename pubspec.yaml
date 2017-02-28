@@ -1,6 +1,6 @@
 name: sass_var_transformer
 description: Transformer that changes vars in SASS-Files
-version: 0.1.0
+version: 0.2.0
 author: Mike Mitterer <office@mikemitterer.at>
 homepage: https://github.com/MikeMitterer/dart-sass-var-transformer
 
