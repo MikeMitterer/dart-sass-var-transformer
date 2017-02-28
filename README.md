@@ -48,7 +48,7 @@ If you run `pub serve`:
    
 Here is a simple example: [GH MDL Text-Only](https://github.com/MikeMitterer/dart-sass-var-transformer/tree/master/samples/text_only)
    
-###License 
+### License 
 
     Copyright 2017 Michael Mitterer (office@mikemitterer.at),
     IT-Consulting and Development Limited, Austrian Branch
