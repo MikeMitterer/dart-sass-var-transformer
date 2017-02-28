@@ -1,0 +1,9 @@
+@import "@text_only/assets/component1/variables";
+@import "./variables";
+
+.cmp2 {
+    border: 1px solid $component1__element1;
+    background-color: $component2__element1;
+    margin: $global_margin;
+    padding: $global_padding;
+}

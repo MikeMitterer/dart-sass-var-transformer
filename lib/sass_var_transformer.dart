@@ -6,6 +6,7 @@ import 'package:sass/src/io/vm.dart';
 import 'package:path/path.dart' as p;
 import 'package:package_resolver/package_resolver.dart';
 import 'package:packages/packages.dart';
+import 'dart:io';
 
 import 'dart:async';
 
@@ -62,7 +63,10 @@ class SassVarTransformer extends Transformer {
         _vars.forEach((final String key, final String value) {
             if(value.startsWith("package:")) {
                 final Package package = packages.resolvePackageUri( Uri.parse(value));
-                contents = contents.replaceAll("@${key}",package.lib.path);
+
+                final String filePath = package.root.toFilePath(windows: Platform.isWindows);
+                print("${key} ->${filePath}");
+                contents = contents.replaceAll("@${key}","${filePath}/lib");
             } else {
                 contents = contents.replaceAll("@${key}",value );
             }

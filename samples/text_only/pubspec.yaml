@@ -26,3 +26,4 @@ transformers:
   - sass_var_transformer:
       # Converts @mdl to ../.pub-cache/hosted/pub.dartlang.org/mdl-x.xx.x/lib
       mdl: package:mdl
+      text_only: package:text_only

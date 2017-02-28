@@ -46,7 +46,8 @@ If you run `pub serve`:
    
    - SCSS-File will be compiled to .CSS
    
-Here is a simple example: [GH MDL Text-Only](https://github.com/MikeMitterer/dart-sass-var-transformer/tree/master/samples/text_only)
+Check out this sample: [GH MDL Text-Only](https://github.com/MikeMitterer/dart-sass-var-transformer/tree/master/samples/text_only)  
+The sample uses a mixture between Global-Package-Style and Styles for local components!
    
 ### License 
 
