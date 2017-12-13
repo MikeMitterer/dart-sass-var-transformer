@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
-@import "@mdl/assets/themes/deep_purple-pink/material-design-lite";
+@import "package:mdl/assets/themes/deep_purple-pink/material-design-lite";
 
+.test {
+    background-color: green;
+}
 

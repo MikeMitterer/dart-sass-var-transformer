@@ -13,3 +13,6 @@ dependencies:
    
   sass: ^1.0.0-alpha
   barback: ^0.15.2
+
+dev_dependency:
+  test: any

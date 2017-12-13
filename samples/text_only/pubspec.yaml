@@ -10,20 +10,23 @@ environment:
 dependencies:
   browser: any
 
-  mdl: ^1.18.0
+  mdl: # '>=2.1.0 <3.0.0'
+    git:
+      url: git@github.com:MikeMitterer/dart-material-design-lite.git
+      ref: v2.2
+    # path: /Volumes/Daten/DevLocal/DevDart/MaterialDesignLite
 
-  logging: any
-  logging_handlers: any
-  console_log_handler: any
+  logging: '>=0.11.3 <1.0.0'
+  console_log_handler: '>=0.5.0 <1.0.0'
 
-  di: ^3.3.8
+#  sass_var_transformer:
+#    path: ../..
 
-  sass_var_transformer:
-    path: ../..
+dev_dependencies:
+  sass_builder: ^1.0.0
 
-transformers:
-  - di
-  - sass_var_transformer:
-      # Converts @mdl to ../.pub-cache/hosted/pub.dartlang.org/mdl-x.xx.x/lib
-      mdl: package:mdl
-      text_only: package:text_only
+#transformers:
+#  - sass_var_transformer:
+#      # Converts @mdl to ../.pub-cache/hosted/pub.dartlang.org/mdl-x.xx.x/lib
+#      mdl: package:mdl
+#      text_only: package:text_only

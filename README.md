@@ -1,3 +1,6 @@
+# [ DEPRECIATED ]
+> Replaced by [sass_builder](https://pub.dartlang.org/packages/sass_builder)
+
 # SASS Var Transformer
 > Replaces vars in SCSS files with package path and compiles it to .css files
 
@@ -16,7 +19,6 @@ dependencies:
   sass_var_transformer: any
   
 transformers:
-  - di
   
   # And this
   - sass_var_transformer:

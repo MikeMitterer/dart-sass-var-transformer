@@ -1,9 +1,5 @@
 import 'package:barback/barback.dart';
-import 'package:sass/src/ast/sass.dart' as sass;
-import 'package:sass/src/visitor/serialize.dart';
-import 'package:sass/src/visitor/perform.dart';
 import 'package:sass/src/io/vm.dart';
-import 'package:path/path.dart' as p;
 import 'package:package_resolver/package_resolver.dart';
 import 'package:packages/packages.dart';
 import 'dart:io';
